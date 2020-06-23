@@ -4,16 +4,22 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion rootProject.ext.versions.build.android.compileSdk
+    buildToolsVersion rootProject.ext.versions.build.android.tools
 
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.versions.build.android.minSdk
+        targetSdkVersion rootProject.ext.versions.build.android.targetSdk
+        versionCode rootProject.ext.appVersionCode
+        versionName rootProject.ext.appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -24,6 +30,8 @@ android {
     }
 
     dependencies {
+        def libraries = rootProject.ext.libraries
+
         kapt libraries.dagger.processor
         kapt libraries.dagger.compiler
 
