@@ -5,5 +5,5 @@
 dependencies {
     def libraries = rootProject.ext.libraries
 
-    implementtion project(':domain')
+    implementation project(':domain')
 }
