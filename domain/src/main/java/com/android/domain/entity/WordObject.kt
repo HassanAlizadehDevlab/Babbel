@@ -1,4 +1,4 @@
-package com.android.domain.executor.entity
+package com.android.domain.entity
 
 /**
  * Created by hassanalizadeh on 24,June,2020

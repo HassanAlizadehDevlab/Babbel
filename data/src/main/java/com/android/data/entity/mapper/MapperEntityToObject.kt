@@ -1,7 +1,7 @@
 package com.android.data.entity.mapper
 
 import com.android.data.entity.model.local.WordEntity
-import com.android.domain.executor.entity.WordObject
+import com.android.domain.entity.WordObject
 
 /**
  * Define extensions to map db entity objects to domain object.

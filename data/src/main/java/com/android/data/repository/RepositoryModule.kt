@@ -1,7 +1,7 @@
 package com.android.data.repository
 
 import com.android.data.repository.datasource.DataSourceModule
-import com.android.domain.executor.repository.WordRepository
+import com.android.domain.repository.WordRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Reusable

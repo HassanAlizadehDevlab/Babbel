@@ -1,6 +1,6 @@
-package com.android.domain.executor.repository
+package com.android.domain.repository
 
-import com.android.domain.executor.entity.WordObject
+import com.android.domain.entity.WordObject
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
 
