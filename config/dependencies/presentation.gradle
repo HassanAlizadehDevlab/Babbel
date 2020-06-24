@@ -15,4 +15,5 @@ dependencies {
     implementation libraries.android.lifecycleExtensions
     implementation libraries.android.archComponentsStreams
     implementation libraries.android.core_ktx
+    implementation libraries.android.supportDesign
 }
