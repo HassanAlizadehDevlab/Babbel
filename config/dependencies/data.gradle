@@ -6,4 +6,9 @@ dependencies {
     def libraries = rootProject.ext.libraries
 
     implementation project(':domain')
+
+    implementation libraries.gson
+    implementation libraries.retrofit.retrofit
+    implementation libraries.retrofit.converterGson
+    implementation libraries.retrofit.rxjavaAdapter
 }
