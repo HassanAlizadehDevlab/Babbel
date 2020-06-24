@@ -7,8 +7,13 @@ dependencies {
 
     implementation project(':domain')
 
+
+    kapt libraries.room.compiler
+
     implementation libraries.gson
     implementation libraries.retrofit.retrofit
     implementation libraries.retrofit.converterGson
     implementation libraries.retrofit.rxjavaAdapter
+    implementation libraries.room.runtime
+    implementation libraries.room.rxJava
 }
