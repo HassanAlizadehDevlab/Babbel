@@ -6,6 +6,7 @@ import com.android.domain.entity.WordObject
 import com.android.domain.repository.WordRepository
 import io.reactivex.Completable
 import io.reactivex.Flowable
+import io.reactivex.Single
 import javax.inject.Inject
 
 /**
@@ -21,6 +22,7 @@ class WordRepositoryImpl @Inject constructor(
         .flatMap { dataSource.deleteAll().toSingle { it } }
         .flatMapCompletable { dataSource.insertWords(it) }
 
-    override fun loadWords(): Flowable<List<WordObject>> = dataSource.loadWords().map { it.map() }
+    override fun loadWordsByRange(range: Int): Single<List<WordObject>> =
+        dataSource.loadWordsByRange(range).map { it.map() }
 
 }

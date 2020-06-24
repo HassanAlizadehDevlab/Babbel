@@ -8,8 +8,9 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "word")
 data class WordEntity(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     val id: Int,
     val textEnglish: String,
-    val textSpanish: String
+    val textSpanish: String,
+    val passed: Boolean
 )

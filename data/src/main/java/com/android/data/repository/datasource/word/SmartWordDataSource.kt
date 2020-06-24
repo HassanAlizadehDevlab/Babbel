@@ -5,7 +5,6 @@ import com.android.data.entity.model.local.WordEntity
 import com.android.data.entity.model.remote.Word
 import com.android.data.network.DataServiceWords
 import io.reactivex.Completable
-import io.reactivex.Flowable
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -22,7 +21,8 @@ class SmartWordDataSource @Inject constructor(
     override fun insertWords(words: List<WordEntity>): Completable =
         Completable.fromCallable { wordDao.insert(words) }
 
-    override fun loadWords(): Flowable<List<WordEntity>> = wordDao.selectAll()
+    override fun loadWordsByRange(range: Int): Single<List<WordEntity>> =
+        wordDao.selectByRange(range)
 
     override fun deleteAll(): Completable = Completable.fromCallable { wordDao.deleteAll() }
 

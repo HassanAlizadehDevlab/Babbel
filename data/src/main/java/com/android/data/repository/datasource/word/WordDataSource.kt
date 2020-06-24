@@ -12,6 +12,6 @@ import io.reactivex.Single
 interface WordDataSource {
     fun getWords(): Single<List<Word>>
     fun insertWords(words: List<WordEntity>): Completable
-    fun loadWords(): Flowable<List<WordEntity>>
+    fun loadWordsByRange(range: Int): Single<List<WordEntity>>
     fun deleteAll(): Completable
 }

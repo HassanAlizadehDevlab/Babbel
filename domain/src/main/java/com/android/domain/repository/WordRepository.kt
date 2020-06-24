@@ -2,7 +2,7 @@ package com.android.domain.repository
 
 import com.android.domain.entity.WordObject
 import io.reactivex.Completable
-import io.reactivex.Flowable
+import io.reactivex.Single
 
 /**
  * The [WordRepository] is responsible for declaring methods for Word entity use cases to contact
@@ -10,5 +10,5 @@ import io.reactivex.Flowable
  */
 interface WordRepository {
     fun getWords(): Completable
-    fun loadWords(): Flowable<List<WordObject>>
+    fun loadWordsByRange(range: Int): Single<List<WordObject>>
 }
