@@ -1,6 +1,6 @@
 package com.android.domain.executor
 
-import io.reactivex.Scheduler
+import io.reactivex.rxjava3.core.Scheduler
 
 /**
  * Created by hassanalizadeh on 26,December,2019
