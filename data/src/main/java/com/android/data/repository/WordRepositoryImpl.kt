@@ -16,8 +16,10 @@ class WordRepositoryImpl @Inject constructor(
     private val dataSource: WordDataSource
 ) : WordRepository {
 
-    override fun loadWords(): Completable = dataSource.loadWords()
+    override fun getWords(): Completable = dataSource.getWords()
+        .map { it.map() }
+        .flatMapCompletable { dataSource.insertWords(it) }
 
-    override fun words(): Flowable<List<WordObject>> = dataSource.words().map { it.map() }
+    override fun loadWords(): Flowable<List<WordObject>> = dataSource.loadWords().map { it.map() }
 
 }

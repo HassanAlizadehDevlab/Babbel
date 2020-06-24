@@ -9,6 +9,6 @@ import io.reactivex.rxjava3.core.Flowable
  * with Word data sources.
  */
 interface WordRepository {
-    fun loadWords(): Completable
-    fun words(): Flowable<List<WordObject>>
+    fun getWords(): Completable
+    fun loadWords(): Flowable<List<WordObject>>
 }
