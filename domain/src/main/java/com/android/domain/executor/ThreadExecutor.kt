@@ -3,6 +3,6 @@ package com.android.domain.executor
 import java.util.concurrent.Executor
 
 /**
- * Created by hassanalizadeh on 26,December,2019
+ * The [ThreadExecutor] is a contract for io Threads.
  */
 interface ThreadExecutor : Executor

@@ -3,7 +3,7 @@ package com.android.domain.executor
 import io.reactivex.Scheduler
 
 /**
- * Created by hassanalizadeh on 26,December,2019
+ * The [ThreadExecutor] is a contract for UI Threads.
  */
 interface PostExecutionThread {
     fun scheduler(): Scheduler
