@@ -24,4 +24,6 @@ class SmartWordDataSource @Inject constructor(
 
     override fun loadWords(): Flowable<List<WordEntity>> = wordDao.selectAll()
 
+    override fun deleteAll(): Completable = Completable.fromCallable { wordDao.deleteAll() }
+
 }

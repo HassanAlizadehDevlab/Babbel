@@ -18,6 +18,7 @@ class WordRepositoryImpl @Inject constructor(
 
     override fun getWords(): Completable = dataSource.getWords()
         .map { it.map() }
+        .flatMap { dataSource.deleteAll().toSingle { it } }
         .flatMapCompletable { dataSource.insertWords(it) }
 
     override fun loadWords(): Flowable<List<WordObject>> = dataSource.loadWords().map { it.map() }

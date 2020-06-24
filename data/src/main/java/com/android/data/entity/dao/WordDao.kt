@@ -18,4 +18,7 @@ interface WordDao {
     @Query("SELECT * FROM word ORDER BY id")
     fun selectAll(): Flowable<List<WordEntity>>
 
+    @Query("DELETE FROM word")
+    fun deleteAll()
+
 }

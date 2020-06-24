@@ -13,4 +13,5 @@ interface WordDataSource {
     fun getWords(): Single<List<Word>>
     fun insertWords(words: List<WordEntity>): Completable
     fun loadWords(): Flowable<List<WordEntity>>
+    fun deleteAll(): Completable
 }
