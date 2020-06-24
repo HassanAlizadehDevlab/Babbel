@@ -2,9 +2,9 @@ package com.android.domain.executor.transformer
 
 import com.android.domain.executor.PostExecutionThread
 import com.android.domain.executor.ThreadExecutor
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.core.ObservableSource
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.Observable
+import io.reactivex.ObservableSource
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 /**

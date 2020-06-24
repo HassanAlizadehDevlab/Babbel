@@ -1,6 +1,6 @@
 package com.android.domain.executor.transformer
 
-import io.reactivex.rxjava3.core.ObservableTransformer
+import io.reactivex.ObservableTransformer
 
 /**
  * A transformer to io thread for Observable.

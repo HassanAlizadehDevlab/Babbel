@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.android.data.entity.model.local.WordEntity
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Flowable
 
 /**
  * The [WordDao] is a contract for contacting with [WordEntity] table in Database.

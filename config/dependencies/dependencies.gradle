@@ -63,8 +63,8 @@ ext {
 
             // Rx
             rx           : [
-                    java   : '3.0.4',
-                    android: '3.0.0'
+                    java   : '2.2.19',
+                    android: '2.1.1'
             ],
 
             // Room
@@ -144,8 +144,8 @@ ext {
             ],
 
             rx         : [
-                    java   : "io.reactivex.rxjava3:rxjava:${versions.rx.java}",
-                    android: "io.reactivex.rxjava3:rxandroid:${versions.rx.android}"
+                    java   : "io.reactivex.rxjava2:rxjava:${versions.rx.java}",
+                    android: "io.reactivex.rxjava2:rxandroid:${versions.rx.android}"
             ],
 
             room       : [

@@ -1,7 +1,7 @@
 package com.android.data.network
 
 import com.android.data.entity.model.remote.Word
-import io.reactivex.rxjava3.core.Single
+import io.reactivex.Single
 import retrofit2.http.GET
 
 /**

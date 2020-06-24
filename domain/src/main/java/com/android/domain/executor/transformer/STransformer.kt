@@ -1,6 +1,6 @@
 package com.android.domain.executor.transformer
 
-import io.reactivex.rxjava3.core.SingleTransformer
+import io.reactivex.SingleTransformer
 
 /**
  * A transformer to io thread for Single.

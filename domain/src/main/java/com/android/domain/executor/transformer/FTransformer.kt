@@ -1,6 +1,6 @@
 package com.android.domain.executor.transformer
 
-import io.reactivex.rxjava3.core.FlowableTransformer
+import io.reactivex.FlowableTransformer
 
 /**
  * A transformer to io thread for Flowable.

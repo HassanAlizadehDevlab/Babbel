@@ -2,8 +2,8 @@ package com.android.domain.executor.transformer
 
 import com.android.domain.executor.PostExecutionThread
 import com.android.domain.executor.ThreadExecutor
-import io.reactivex.rxjava3.core.Flowable
-import io.reactivex.rxjava3.schedulers.Schedulers
+import io.reactivex.Flowable
+import io.reactivex.schedulers.Schedulers
 import org.reactivestreams.Publisher
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package com.android.domain.executor.transformer
 
-import io.reactivex.rxjava3.core.MaybeTransformer
+import io.reactivex.MaybeTransformer
 
 /**
  * A transformer to io thread for Maybe.

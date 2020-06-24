@@ -4,8 +4,8 @@ import com.android.data.entity.mapper.map
 import com.android.data.repository.datasource.word.WordDataSource
 import com.android.domain.entity.WordObject
 import com.android.domain.repository.WordRepository
-import io.reactivex.rxjava3.core.Completable
-import io.reactivex.rxjava3.core.Flowable
+import io.reactivex.Completable
+import io.reactivex.Flowable
 import javax.inject.Inject
 
 /**
