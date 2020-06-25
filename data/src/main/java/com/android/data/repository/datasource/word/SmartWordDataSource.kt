@@ -24,6 +24,8 @@ class SmartWordDataSource @Inject constructor(
     override fun loadWordsByRange(range: Int): Single<List<WordEntity>> =
         wordDao.selectByRange(range)
 
+    override fun passedWordsAvailability(): Completable = wordDao.firstPassedWord().ignoreElement()
+
     override fun deleteAll(): Completable = Completable.fromCallable { wordDao.deleteAll() }
 
 }

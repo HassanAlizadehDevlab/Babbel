@@ -23,6 +23,9 @@ interface WordDao {
     @Query("SELECT * FROM word WHERE passed=0 ORDER BY id LIMIT :range")
     fun selectByRange(range: Int = 10): Single<List<WordEntity>>
 
+    @Query("SELECT * FROM word WHERE passed=1 LIMIT 1")
+    fun firstPassedWord(): Single<WordEntity>
+
     @Query("DELETE FROM word")
     fun deleteAll()
 
