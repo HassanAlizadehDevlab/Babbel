@@ -8,7 +8,7 @@ import com.android.presentation.ui.starter.fragment.view.StarterFragment
 /**
  * An activity for the starter page
  */
-class StarterActivity : BaseActivity() {
+class StarterActivity : BaseActivity(), StarterNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +16,11 @@ class StarterActivity : BaseActivity() {
 
         if (savedInstanceState == null)
             addFragment(R.id.fragmentContainer, StarterFragment.newInstance())
+    }
+
+    override fun showWordPage() {
+        navigator.toWords(this)
+        finish()
     }
 
 }

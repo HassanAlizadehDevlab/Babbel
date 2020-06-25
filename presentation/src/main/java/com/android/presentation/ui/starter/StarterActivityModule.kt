@@ -24,4 +24,8 @@ abstract class StarterActivityModule {
     @PerActivity
     abstract fun activity(activity: StarterActivity): AppCompatActivity
 
+    @Binds
+    @PerActivity
+    abstract fun starterNavigator(activity: StarterActivity): StarterNavigator
+
 }
