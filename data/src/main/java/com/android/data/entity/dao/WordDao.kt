@@ -1,9 +1,6 @@
 package com.android.data.entity.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.android.data.entity.model.local.WordEntity
 import io.reactivex.Flowable
 import io.reactivex.Single
@@ -16,6 +13,9 @@ interface WordDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(words: List<WordEntity>)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    fun update(words: List<WordEntity>)
 
     @Query("SELECT * FROM word ORDER BY id")
     fun selectAll(): Flowable<List<WordEntity>>
