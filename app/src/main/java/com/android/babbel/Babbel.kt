@@ -3,6 +3,7 @@ package com.android.babbel
 import android.util.Log
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
+import io.reactivex.plugins.RxJavaPlugins
 
 /**
  * Application class.
@@ -15,6 +16,7 @@ class Babbel : DaggerApplication() {
     override fun onCreate() {
         super.onCreate()
         createDBLogger()
+        initRxErrorHandler()
     }
 
     private fun createDBLogger() {
@@ -24,6 +26,13 @@ class Babbel : DaggerApplication() {
             val value = getAddressLog.invoke(null)
             Log.i("Hassan", "DB debug address: $value")
         }
+    }
+
+    /**
+     * RxJavaPlugins.setErrorHandler used for handle rx errors like network errors
+     * */
+    private fun initRxErrorHandler() {
+        RxJavaPlugins.setErrorHandler {}
     }
 
 }

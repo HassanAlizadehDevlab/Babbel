@@ -30,6 +30,7 @@ class WordFragment : BaseFragment() {
         super.onCreate(savedInstanceState)
 
         viewModel = viewModelProvider(factory)
+        observe(viewModel.messageObservable, ::showMessage)
         observe(viewModel.timeCounter, ::observeTimeCounter)
         observe(viewModel.wordCounter, ::observeWordCounter)
         observe(viewModel.currentWord, ::observeWord)

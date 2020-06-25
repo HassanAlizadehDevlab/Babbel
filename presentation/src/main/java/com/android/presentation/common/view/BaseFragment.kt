@@ -21,6 +21,14 @@ abstract class BaseFragment : DaggerFragment() {
         super.onAttach(context)
     }
 
+    fun showMessage(message: MessageData) {
+        if (message.message != null) {
+            showMessage(message.message!!)
+        } else if (message.resource != null) {
+            showMessage(message.resource!!)
+        }
+    }
+
     fun showMessage(@StringRes resourceId: Int) {
         showMessage(getString(resourceId))
     }

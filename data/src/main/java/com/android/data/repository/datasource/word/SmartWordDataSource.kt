@@ -3,6 +3,7 @@ package com.android.data.repository.datasource.word
 import com.android.data.entity.dao.WordDao
 import com.android.data.entity.model.local.WordEntity
 import com.android.data.entity.model.remote.Word
+import com.android.data.extension.onError
 import com.android.data.network.DataServiceWords
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -16,7 +17,7 @@ class SmartWordDataSource @Inject constructor(
     private val wordDao: WordDao
 ) : WordDataSource {
 
-    override fun getWords(): Single<List<Word>> = service.words()
+    override fun getWords(): Single<List<Word>> = service.words().onError()
 
     override fun checkWordsAvailability(): Completable {
         return wordDao.count()

@@ -18,6 +18,7 @@ class SplashViewModel @Inject constructor(
 
     fun getWords() {
         getWordsUseCase.invoke()
+            .onError()
             .subscribe({
                 wordsAreReady.value = true
             }, {

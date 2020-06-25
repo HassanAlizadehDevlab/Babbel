@@ -28,6 +28,7 @@ class SplashFragment : BaseFragment() {
         super.onCreate(savedInstanceState)
 
         viewModel = viewModelProvider(factory)
+        observe(viewModel.messageObservable, ::showMessage)
         observe(viewModel.wordsAreReady, ::handleNavigation)
     }
 

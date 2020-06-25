@@ -6,6 +6,7 @@ dependencies {
     def libraries = rootProject.ext.libraries
 
     implementation project(':domain')
+    implementation project(':common')
 
 
     implementation libraries.android.liveData
