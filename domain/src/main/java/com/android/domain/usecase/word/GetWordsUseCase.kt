@@ -16,6 +16,6 @@ class GetWordsUseCase @Inject constructor(
 ) : UseCaseCompletable<Unit>() {
     override fun execute(param: Unit): Completable =
         repository.getWords()
-//            .onErrorResumeNext { repository.checkWordsAvailability() }
+            .onErrorResumeNext { repository.checkWordsAvailability() }
             .compose(transformer)
 }
