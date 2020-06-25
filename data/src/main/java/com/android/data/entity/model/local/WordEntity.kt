@@ -9,7 +9,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "word")
 data class WordEntity(
     @PrimaryKey
-    val id: Int,
     val textEnglish: String,
     val textSpanish: String,
     val passed: Boolean

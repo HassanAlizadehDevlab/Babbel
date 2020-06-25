@@ -14,13 +14,10 @@ interface WordDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(words: List<WordEntity>)
 
-    @Update(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun update(words: List<WordEntity>)
 
-    @Query("SELECT * FROM word ORDER BY id")
-    fun selectAll(): Flowable<List<WordEntity>>
-
-    @Query("SELECT * FROM word WHERE passed=0 ORDER BY id LIMIT :range")
+    @Query("SELECT * FROM word WHERE passed=0 LIMIT :range")
     fun selectByRange(range: Int = 10): Single<List<WordEntity>>
 
     @Query("SELECT * FROM word WHERE passed=1 LIMIT 1")

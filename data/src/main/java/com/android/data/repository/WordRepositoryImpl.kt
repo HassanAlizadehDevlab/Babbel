@@ -25,4 +25,7 @@ class WordRepositoryImpl @Inject constructor(
 
     override fun passedWordsAvailability(): Completable = dataSource.passedWordsAvailability()
 
+    override fun updateWords(words: List<WordObject>): Completable =
+        dataSource.updateWords(words.map())
+
 }

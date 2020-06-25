@@ -21,13 +21,16 @@ class WordProvider2020 @Inject constructor() : WordProvider {
         currentIndex = 0
     }
 
+    override fun getNewWordList(): List<WordObject> {
+        return newWords
+    }
+
     override fun hasNext(): Boolean {
         return words.size != currentIndex
     }
 
     override fun next(): WordObject {
         currentWord = WordObject(
-            words[currentIndex].id,
             words[currentIndex].textEnglish,
             getTranslation().invoke()
         )
@@ -41,8 +44,8 @@ class WordProvider2020 @Inject constructor() : WordProvider {
 
     override fun setResult(isMatch: Boolean) {
         if (currentWord.textSpanish == words[currentIndex].textSpanish && isMatch)
-            newWords.add(currentWord.apply { passed = true })
-        else newWords.add(currentWord.apply { passed = false })
+            newWords.add(words[currentIndex].apply { passed = true })
+        else newWords.add(words[currentIndex].apply { passed = false })
 
         currentIndex++
     }

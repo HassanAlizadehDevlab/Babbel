@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.android.domain.entity.ResultObject
 import com.android.domain.entity.WordObject
 import com.android.domain.usecase.word.LoadWordsUseCase
+import com.android.domain.usecase.word.UpdateWordsUseCase
 import com.android.presentation.common.view.BaseViewModel
 import com.android.presentation.ui.word.fragment.util.WordProvider
 import javax.inject.Inject
@@ -14,6 +15,7 @@ import javax.inject.Inject
  */
 class WordViewModel @Inject constructor(
     private val loadWordsUseCase: LoadWordsUseCase,
+    private val updateWordsUseCase: UpdateWordsUseCase,
     private val wordProvider: WordProvider
 ) : BaseViewModel() {
 
@@ -59,7 +61,15 @@ class WordViewModel @Inject constructor(
     private fun selectNextWord() {
         if (wordProvider.hasNext())
             currentWord.value = wordProvider.next()
-        else finish.value = wordProvider.getResult()
+        else {
+            updateWordsUseCase.invoke(wordProvider.getNewWordList())
+                .subscribe({
+                    finish.value = wordProvider.getResult()
+                }, {
+                    finish.value = wordProvider.getResult()
+                })
+                .track()
+        }
     }
 
     private fun setWordIndex() {
@@ -89,7 +99,7 @@ class WordViewModel @Inject constructor(
 
     companion object {
         const val WORD_COUNT = 10
-        private const val MAX_TIME = 3000L
+        private const val MAX_TIME = 10000L
         private const val SECOND = 1000L
     }
 

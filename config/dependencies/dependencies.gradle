@@ -168,5 +168,7 @@ ext {
             ],
 
             gson       : "com.google.code.gson:gson:${versions.gson}",
+
+            amitshekhar     : "com.amitshekhar.android:debug-db:1.0.5",
     ]
 }

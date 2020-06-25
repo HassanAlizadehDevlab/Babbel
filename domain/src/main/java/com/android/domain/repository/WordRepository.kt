@@ -12,4 +12,5 @@ interface WordRepository {
     fun getWords(): Completable
     fun loadWordsByRange(range: Int): Single<List<WordObject>>
     fun passedWordsAvailability(): Completable
+    fun updateWords(words: List<WordObject>): Completable
 }

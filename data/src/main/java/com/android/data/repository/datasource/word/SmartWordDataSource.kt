@@ -28,4 +28,7 @@ class SmartWordDataSource @Inject constructor(
 
     override fun deleteAll(): Completable = Completable.fromCallable { wordDao.deleteAll() }
 
+    override fun updateWords(words: List<WordEntity>): Completable =
+        Completable.fromCallable { wordDao.update(words) }
+
 }

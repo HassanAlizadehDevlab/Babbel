@@ -7,5 +7,5 @@ import com.android.domain.entity.WordObject
  * Define extensions to map db entity objects to domain object.
  */
 
-fun WordEntity.map(): WordObject = WordObject(id, textEnglish, textSpanish)
+fun WordEntity.map(): WordObject = WordObject(textEnglish, textSpanish)
 fun List<WordEntity>.map(): List<WordObject> = map { it.map() }
