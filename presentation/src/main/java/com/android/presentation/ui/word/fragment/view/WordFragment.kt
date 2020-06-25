@@ -60,6 +60,9 @@ class WordFragment : BaseFragment() {
     }
 
     private fun observeWord(word: WordObject) {
+        parent.progress = 0F
+        parent.transitionToEnd()
+
         txtOriginalText.text = word.textEnglish
         txtTranslationText.text = word.textSpanish
     }
