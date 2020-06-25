@@ -8,6 +8,8 @@ import com.android.presentation.ui.splash.SplashActivity
 import com.android.presentation.ui.splash.SplashActivityModule
 import com.android.presentation.ui.starter.StarterActivity
 import com.android.presentation.ui.starter.StarterActivityModule
+import com.android.presentation.ui.word.WordActivity
+import com.android.presentation.ui.word.WordActivityModule
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -35,5 +37,9 @@ abstract class BabbelModule {
     @PerActivity
     @ContributesAndroidInjector(modules = [CongratulationActivityModule::class])
     abstract fun congratulationActivityInjector(): CongratulationActivity
+
+    @PerActivity
+    @ContributesAndroidInjector(modules = [WordActivityModule::class])
+    abstract fun wordActivityInjector(): WordActivity
 
 }

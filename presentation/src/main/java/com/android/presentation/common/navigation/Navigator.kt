@@ -6,6 +6,7 @@ import com.android.domain.entity.ResultObject
 import com.android.presentation.common.Constants
 import com.android.presentation.ui.congratulation.CongratulationActivity
 import com.android.presentation.ui.starter.StarterActivity
+import com.android.presentation.ui.word.WordActivity
 import javax.inject.Inject
 
 /**
@@ -19,7 +20,7 @@ class Navigator @Inject constructor() {
     }
 
     fun toWords(context: Context) {
-        // context.startActivity(Intent(context, WordsActivity::class.java))
+        context.startActivity(Intent(context, WordActivity::class.java))
     }
 
     fun toCongratulation(context: Context, result: ResultObject) {
