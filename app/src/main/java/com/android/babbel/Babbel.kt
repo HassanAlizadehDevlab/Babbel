@@ -5,7 +5,7 @@ import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 
 /**
- * Created by hassanalizadeh on 24,June,2020
+ * Application class.
  */
 class Babbel : DaggerApplication() {
 

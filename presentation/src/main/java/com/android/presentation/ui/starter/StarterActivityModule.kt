@@ -10,9 +10,6 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 @Module(includes = [BaseActivityModule::class])
 abstract class StarterActivityModule {
 

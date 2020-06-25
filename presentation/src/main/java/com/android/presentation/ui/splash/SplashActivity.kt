@@ -5,9 +5,6 @@ import com.android.presentation.R
 import com.android.presentation.common.BaseActivity
 import com.android.presentation.ui.splash.fragment.view.SplashFragment
 
-/**
- * Created by hassanalizadeh on 23,June,2020
- */
 class SplashActivity : BaseActivity(), SplashNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {

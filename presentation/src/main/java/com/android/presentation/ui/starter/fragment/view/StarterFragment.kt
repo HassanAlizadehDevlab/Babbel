@@ -16,9 +16,6 @@ import com.android.presentation.ui.starter.fragment.viewmodel.StarterViewModel
 import kotlinx.android.synthetic.main.fragment_starter.*
 import javax.inject.Inject
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class StarterFragment : BaseFragment() {
 
     @Inject

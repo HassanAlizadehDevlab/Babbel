@@ -7,9 +7,6 @@ import com.android.presentation.common.BaseActivity
 import com.android.presentation.common.Constants
 import com.android.presentation.ui.congratulation.fragment.view.CongratulationFragment
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class CongratulationActivity : BaseActivity(), CongratulationNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {

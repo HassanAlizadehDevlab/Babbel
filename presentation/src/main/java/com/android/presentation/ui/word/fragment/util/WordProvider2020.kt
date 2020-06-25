@@ -6,7 +6,8 @@ import javax.inject.Inject
 import kotlin.random.Random
 
 /**
- * Created by hassanalizadeh on 25,June,2020
+ * Implementation of word provider.
+ * It can replace easily to another implementation.
  */
 class WordProvider2020 @Inject constructor() : WordProvider {
 

@@ -8,7 +8,7 @@ import io.reactivex.Completable
 import javax.inject.Inject
 
 /**
- * Created by hassanalizadeh on 25,June,2020
+ * An use case for update user answers and save in DB.
  */
 class UpdateWordsUseCase @Inject constructor(
     private val repository: WordRepository,

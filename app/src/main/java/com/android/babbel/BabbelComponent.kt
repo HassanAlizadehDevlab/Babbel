@@ -8,7 +8,7 @@ import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 /**
- * Created by hassanalizadeh on 24,June,2020
+ * Project dagger component.
  */
 @Singleton
 @Component(

@@ -16,9 +16,6 @@ import com.android.presentation.ui.word.fragment.viewmodel.WordViewModel
 import kotlinx.android.synthetic.main.fragment_word.*
 import javax.inject.Inject
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class WordFragment : BaseFragment() {
 
     @Inject

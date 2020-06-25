@@ -15,9 +15,6 @@ import com.android.presentation.ui.splash.fragment.viewmodel.SplashViewModel
 import kotlinx.android.synthetic.main.fragment_splash.*
 import javax.inject.Inject
 
-/**
- * Created by hassanalizadeh on 24,June,2020
- */
 class SplashFragment : BaseFragment() {
 
     @Inject

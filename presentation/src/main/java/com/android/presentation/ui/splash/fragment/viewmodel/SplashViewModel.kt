@@ -6,9 +6,6 @@ import com.android.domain.usecase.word.GetWordsUseCase
 import com.android.presentation.common.view.BaseViewModel
 import javax.inject.Inject
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class SplashViewModel @Inject constructor(
     private val getWordsUseCase: GetWordsUseCase
 ) : BaseViewModel() {

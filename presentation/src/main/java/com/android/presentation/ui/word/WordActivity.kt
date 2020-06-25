@@ -6,9 +6,6 @@ import com.android.presentation.R
 import com.android.presentation.common.BaseActivity
 import com.android.presentation.ui.word.fragment.view.WordFragment
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class WordActivity : BaseActivity(), WordNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -4,7 +4,7 @@ import com.android.domain.entity.ResultObject
 import com.android.domain.entity.WordObject
 
 /**
- * Created by hassanalizadeh on 25,June,2020
+ * A contract for working with WordProviders.
  */
 interface WordProvider {
     fun setWords(words: List<WordObject>)

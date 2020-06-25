@@ -12,9 +12,6 @@ import com.android.presentation.ui.congratulation.CongratulationNavigator
 import kotlinx.android.synthetic.main.fragment_congratulation.*
 import javax.inject.Inject
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
 class CongratulationFragment : BaseFragment() {
 
     @Inject

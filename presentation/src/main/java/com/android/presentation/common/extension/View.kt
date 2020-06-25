@@ -2,10 +2,6 @@ package com.android.presentation.common.extension
 
 import android.view.View
 
-/**
- * Created by hassanalizadeh on 25,June,2020
- */
-
 fun View.gone() {
     this.visibility = View.GONE
 }
