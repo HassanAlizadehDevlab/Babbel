@@ -24,4 +24,8 @@ abstract class WordActivityModule {
     @PerActivity
     abstract fun activity(activity: WordActivity): AppCompatActivity
 
+    @Binds
+    @PerActivity
+    abstract fun wordNavigator(activity: WordActivity): WordNavigator
+
 }
