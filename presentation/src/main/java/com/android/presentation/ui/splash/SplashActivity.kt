@@ -1,6 +1,7 @@
 package com.android.presentation.ui.splash
 
 import android.os.Bundle
+import android.os.Handler
 import com.android.presentation.R
 import com.android.presentation.common.BaseActivity
 import com.android.presentation.ui.splash.fragment.view.SplashFragment
@@ -14,7 +15,13 @@ class SplashActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFragment(R.id.fragmentContainer, SplashFragment.newInstance())
+        if (savedInstanceState == null)
+            addFragment(R.id.fragmentContainer, SplashFragment.newInstance())
+
+        Handler().postDelayed({
+            navigator.toStarter(this)
+            finish()
+        }, 2000)
     }
 
 }

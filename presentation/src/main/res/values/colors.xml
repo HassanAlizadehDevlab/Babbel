@@ -6,11 +6,12 @@
     <color name="colorPrimaryText">#030a17</color>
     <color name="colorSecondaryText">#81858b</color>
     <color name="colorTertiaryText">#b0b3b6</color>
-    <color name="colorWhiteText">#ffffff</color>
+    <color name="colorWhiteText">@color/white</color>
     <color name="colorBlueText">#3728aa</color>
     <color name="colorCyanText">#00BCD4</color>
     <color name="colorStatusBar">#99000000</color>
     <color name="colorDivider">#ebebeb</color>
 
     <color name="BG">#f4f4f4</color>
+    <color name="white">#ffffff</color>
 </resources>

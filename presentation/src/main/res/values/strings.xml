@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Welcome To Babbel</string>
+    <string name="learn_languages_by_babbel">Learn Languages by \nBabbel</string>
+    <string name="start">Start</string>
+</resources>
