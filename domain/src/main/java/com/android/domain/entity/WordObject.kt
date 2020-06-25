@@ -4,6 +4,9 @@ package com.android.domain.entity
  * Created by hassanalizadeh on 24,June,2020
  */
 data class WordObject(
-    val textEnglish: String,
-    val textSpanish: String
-)
+    var id: Int,
+    var textEnglish: String,
+    var textSpanish: String
+) {
+    var passed: Boolean = false
+}

@@ -5,7 +5,6 @@ import com.android.data.repository.datasource.word.WordDataSource
 import com.android.domain.entity.WordObject
 import com.android.domain.repository.WordRepository
 import io.reactivex.Completable
-import io.reactivex.Flowable
 import io.reactivex.Single
 import javax.inject.Inject
 

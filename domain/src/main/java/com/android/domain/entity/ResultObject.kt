@@ -7,6 +7,6 @@ import java.io.Serializable
  */
 data class ResultObject(
     val success: Byte,
-    val all: Int,
+    val all: Byte,
     val hint: String
 ): Serializable
