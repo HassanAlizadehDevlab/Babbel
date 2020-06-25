@@ -20,6 +20,9 @@ interface WordDao {
     @Query("SELECT * FROM word WHERE passed=0 LIMIT :range")
     fun selectByRange(range: Int = 10): Single<List<WordEntity>>
 
+    @Query("SELECT COUNT(*) FROM word")
+    fun count(): Single<Int>
+
     @Query("SELECT * FROM word WHERE passed=1 LIMIT 1")
     fun firstPassedWord(): Single<WordEntity>
 

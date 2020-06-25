@@ -3,7 +3,6 @@ package com.android.data.repository.datasource.word
 import com.android.data.entity.model.local.WordEntity
 import com.android.data.entity.model.remote.Word
 import io.reactivex.Completable
-import io.reactivex.Flowable
 import io.reactivex.Single
 
 /**
@@ -11,6 +10,7 @@ import io.reactivex.Single
  */
 interface WordDataSource {
     fun getWords(): Single<List<Word>>
+    fun checkWordsAvailability(): Completable
     fun insertWords(words: List<WordEntity>): Completable
     fun loadWordsByRange(range: Int): Single<List<WordEntity>>
     fun passedWordsAvailability(): Completable

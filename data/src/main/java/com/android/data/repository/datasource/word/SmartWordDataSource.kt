@@ -18,6 +18,14 @@ class SmartWordDataSource @Inject constructor(
 
     override fun getWords(): Single<List<Word>> = service.words()
 
+    override fun checkWordsAvailability(): Completable {
+        return wordDao.count()
+            .flatMapCompletable {
+                if (it > 0) Completable.complete()
+                else Completable.error(IllegalStateException())
+            }
+    }
+
     override fun insertWords(words: List<WordEntity>): Completable =
         Completable.fromCallable { wordDao.insert(words) }
 

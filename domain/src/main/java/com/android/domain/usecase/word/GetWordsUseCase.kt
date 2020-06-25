@@ -10,9 +10,11 @@ import javax.inject.Inject
  * An use case to fetch words from remote API.
  */
 class GetWordsUseCase @Inject constructor(
-    private val wordRepository: WordRepository,
+    private val repository: WordRepository,
     private val transformer: CTransformer
 ) : UseCaseCompletable<Unit>() {
     override fun execute(param: Unit): Completable =
-        wordRepository.getWords().compose(transformer)
+        repository.getWords()
+            .onErrorResumeNext { repository.checkWordsAvailability() }
+            .compose(transformer)
 }

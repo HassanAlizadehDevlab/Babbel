@@ -19,7 +19,7 @@ class SplashViewModel @Inject constructor(
         getWords()
     }
 
-    public fun getWords() {
+    fun getWords() {
         getWordsUseCase.invoke()
             .subscribe({
                 wordsAreReady.value = true

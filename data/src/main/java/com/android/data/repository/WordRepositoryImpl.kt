@@ -20,6 +20,8 @@ class WordRepositoryImpl @Inject constructor(
         .map { it.map() }
         .flatMapCompletable { dataSource.insertWords(it) }
 
+    override fun checkWordsAvailability(): Completable = dataSource.checkWordsAvailability()
+
     override fun loadWordsByRange(range: Int): Single<List<WordObject>> =
         dataSource.loadWordsByRange(range).map { it.map() }
 
