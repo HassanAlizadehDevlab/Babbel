@@ -24,4 +24,8 @@ abstract class SplashActivityModule {
     @PerActivity
     abstract fun activity(activity: SplashActivity): AppCompatActivity
 
+    @Binds
+    @PerActivity
+    abstract fun splashNavigator(activity: SplashActivity): SplashNavigator
+
 }

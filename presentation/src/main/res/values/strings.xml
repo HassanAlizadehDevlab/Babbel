@@ -3,4 +3,6 @@
     <string name="welcome">Welcome To Babbel</string>
     <string name="learn_languages_by_babbel">Learn Languages by \nBabbel</string>
     <string name="start">Start</string>
+    <string name="continue_">Continue</string>
+    <string name="retry">Retry</string>
 </resources>

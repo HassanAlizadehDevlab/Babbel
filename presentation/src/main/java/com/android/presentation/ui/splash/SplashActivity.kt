@@ -1,7 +1,6 @@
 package com.android.presentation.ui.splash
 
 import android.os.Bundle
-import android.os.Handler
 import com.android.presentation.R
 import com.android.presentation.common.BaseActivity
 import com.android.presentation.ui.splash.fragment.view.SplashFragment
@@ -9,7 +8,7 @@ import com.android.presentation.ui.splash.fragment.view.SplashFragment
 /**
  * Created by hassanalizadeh on 23,June,2020
  */
-class SplashActivity : BaseActivity() {
+class SplashActivity : BaseActivity(), SplashNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,11 +16,11 @@ class SplashActivity : BaseActivity() {
 
         if (savedInstanceState == null)
             addFragment(R.id.fragmentContainer, SplashFragment.newInstance())
+    }
 
-        Handler().postDelayed({
-            navigator.toStarter(this)
-            finish()
-        }, 2000)
+    override fun showStarterPage() {
+        navigator.toStarter(this)
+        finish()
     }
 
 }

@@ -1,13 +1,13 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppThemeWhite" parent="Theme.MaterialComponents.Light">
+    <style name="AppThemeWhite" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorWhiteText</item>
         <item name="colorPrimaryDark">@color/colorWhiteText</item>
@@ -19,8 +19,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Widget.Babbel.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+    <style name="Widget.Babbel.ProgressBar.White" parent="Widget.AppCompat.ProgressBar">
         <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="Widget.Babbel.ProgressBar.Orange" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@color/orange</item>
     </style>
 
 </resources>
