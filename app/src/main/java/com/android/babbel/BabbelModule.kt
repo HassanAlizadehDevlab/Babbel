@@ -2,6 +2,8 @@ package com.android.babbel
 
 import android.app.Application
 import com.android.presentation.common.di.PerActivity
+import com.android.presentation.ui.congratulation.CongratulationActivity
+import com.android.presentation.ui.congratulation.CongratulationActivityModule
 import com.android.presentation.ui.splash.SplashActivity
 import com.android.presentation.ui.splash.SplashActivityModule
 import com.android.presentation.ui.starter.StarterActivity
@@ -29,5 +31,9 @@ abstract class BabbelModule {
     @PerActivity
     @ContributesAndroidInjector(modules = [StarterActivityModule::class])
     abstract fun starterActivityInjector(): StarterActivity
+
+    @PerActivity
+    @ContributesAndroidInjector(modules = [CongratulationActivityModule::class])
+    abstract fun congratulationActivityInjector(): CongratulationActivity
 
 }

@@ -29,6 +29,10 @@
             android:name="com.android.presentation.ui.starter.StarterActivity"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name="com.android.presentation.ui.congratulation.CongratulationActivity"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

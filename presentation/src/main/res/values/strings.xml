@@ -5,4 +5,5 @@
     <string name="start">Start</string>
     <string name="continue_">Continue</string>
     <string name="retry">Retry</string>
+    <string name="congratulation">Congratulation \n That was perfect!</string>
 </resources>
