@@ -39,7 +39,9 @@ Decided to:
 
 #### What would be the first thing to improve or add if there had been more time 
 I would like to:
-- Add Integration Tests(end-to-end tests)
+- Add more unit tests
+- Add Integration Tests
+- Add more Unit test
 - Add UI Tests
 - Implement more attractive animations using MotionLayout
 - Calculate and display the total points for user in all sections they used the app
