@@ -17,10 +17,9 @@
 - ...
 
 #### I would like to:
-- Add more unit tests
 - Add Integration Tests
 - Add more Unit test
-- Add UI Tests
+- Add UI Tests with Espresso
 - Implement more attractive animations using MotionLayout
 - Calculate and display the total points for user in all sections they used the app
 - Add a mechanism to review the words which the user answered them correctly
